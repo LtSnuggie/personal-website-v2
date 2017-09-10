@@ -10,20 +10,47 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-        loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader" }
-        ]
-    },
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: "css-loader"
-          })
+    loaders: [{
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
+    }]
+  },
+  module: {
+    rules: [{
+      test: /\.html$/,
+      use: [ {
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+          removeComments: false,
+          collapseWhitespace: false
         }
-      ]
+      }],
+    }]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
+      }
+    ]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
+    ]
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
