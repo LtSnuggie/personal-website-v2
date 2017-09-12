@@ -1,13 +1,9 @@
-.content-item.bio {
-  text-align: left;
-}
 
 @media (max-width: 600px) {
-  .content-item.bio {
-    margin: 0;
-    margin-bottom: auto;
+  .professional .content-item.avatar {
+    margin-bottom: 0;
   }
-  .content-item {
-    max-width: 350px;
+  .professional .content-item.list-block {
+    margin-top: 0;
   }
 }

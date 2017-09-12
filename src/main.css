@@ -1,10 +1,11 @@
 .content-container {
   text-align: center;
   display: flex;
-  height: 100%;
+  height: 90%;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  margin: auto;
 }
 .content-item {
   margin: auto;
@@ -18,9 +19,11 @@
 }
 .row .content-item {
   /*height: 100%;*/
+  margin: auto;
 }
 .col .content-item {
   /*width: 100%;*/
+  margin: auto;
 }
 .line-title {
   letter-spacing: 2px;
@@ -28,6 +31,34 @@
   font-weight: bold;
   color: black;
   text-transform: uppercase;
+}
+.background-container {
+  background-position: bottom;
+  background-size: cover;
+}
+.content-container.background-container {
+  height: 100%;
+}
+.title h1{
+  color: black;
+  border: 1px solid black;
+}
+.header {
+  display: flex;
+  margin: auto;
+  height: 10%;
+}
+.header .title {
+  margin: auto;
+}
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 img.circle {
   border-radius: 50%;
@@ -40,8 +71,11 @@ img.medium {
 html {
   background-color: #FFFFFF;
   color: #88BBD6;
+  color: #000000;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 16px;
+  font-size: 2vh;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 html .alt {
     background-color: #E9E9E9;
@@ -50,4 +84,20 @@ html .alt {
 html .highlight {
     background-color: #99D3DF;
     color: #E9E9E9;
+}
+h1 {
+  padding: 10px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: black;
+}
+ul li {
+  list-style-type: none;
+  text-align: left;
+  padding: 5px;
+}
+@media (max-width: 600px) {
+  .content-item {
+    max-width: 350px;
+  }
 }

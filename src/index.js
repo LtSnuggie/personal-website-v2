@@ -24,12 +24,11 @@ var footer = require('html-loader!./views/footer/footer.html');
 var titleBackground = require('file-loader!./assets/TitleImage.jpeg');
 
 $(document).ready(function() {
-  $('#fullpage').fullpage();
+  $('#fullpage').fullpage({responsiveWidth: 600});
 });
 
 $("#1").html(greeting);
-$("#2").html(bio);
-$("#3").html(professional);
-$("#4").html(personal);
-$("#5").html(projects);
-$("#6").html(footer);
+$("#2").html(professional);
+$("#3").html(personal);
+$("#4").html(projects);
+$("#5").html(footer);

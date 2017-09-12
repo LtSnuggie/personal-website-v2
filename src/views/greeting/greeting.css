@@ -1,4 +1,4 @@
-.greeting-title {
+.greeting.title {
   margin: 0;
   margin-top: auto;
   color: white;
@@ -8,8 +8,4 @@
   border: 1px solid white;
   letter-spacing: 2px;
   font-weight: 100;
-}
-#greeting-main {
-  background-position: bottom;
-  background-size: cover;
 }
