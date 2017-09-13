@@ -1,6 +1,6 @@
 var headshot = require('file-loader!../../assets/ELLDPGraduation.jpg');
-var bioCss = require('style-loader!./bio.css');
+var bioCss = require('style-loader!./professional-past.css');
 
 $(document).ready(function() {
-  $("#bio-headshot").attr('data-src',headshot);
+  $("#headshot").attr('src',headshot);
 });

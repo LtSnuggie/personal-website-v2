@@ -1,0 +1,10 @@
+
+@media (max-width: 600px) {
+  .professional-past .content-item.avatar {
+    margin-bottom: 0;
+  }
+  .professional-past .content-item.list-block {
+    margin-top: 0;
+  }
+
+}

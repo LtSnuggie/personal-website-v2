@@ -1,0 +1,10 @@
+
+@media (max-width: 600px) {
+  .professional-current .content-item.avatar {
+    margin-bottom: 0;
+  }
+  .professional-current .content-item.list-block {
+    margin-top: 0;
+  }
+
+}
