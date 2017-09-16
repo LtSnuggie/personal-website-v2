@@ -10,46 +10,32 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    loaders: [{
-      test: /\.css$/,
-      loader: "style-loader!css-loader"
-    }]
-  },
-  module: {
-    rules: [{
-      test: /\.html$/,
-      use: [ {
-        loader: 'html-loader',
-        options: {
-          minimize: true,
-          removeComments: false,
-          collapseWhitespace: false
-        }
-      }],
-    }]
-  },
-  module: {
     rules: [
-      {
-        test: /\.(svg|png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {}
-          }
-        ]
-      }
-    ]
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
+      // the url-loader uses DataUrls.
+      // the file-loader emits files.
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
+      },
+      { test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: "css-loader"
         })
-      }
+      },
+      // {
+      //   test: /\.html$/,
+      //   use: [ {
+      //     loader: 'html-loader',
+      //     options: {
+      //       minimize: true,
+      //       removeComments: false,
+      //       collapseWhitespace: false
+      //     }
+      //   } ]
+      // }
     ]
   },
   plugins: [
