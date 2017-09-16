@@ -29,7 +29,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     responsiveWidth: 601,
 		responsiveHeight: 601,
-		responsiveSlides: true,
+		responsiveSlides: true
   });
 });
 
