@@ -8,5 +8,9 @@ var picWidth = 5472;
 var picHeight = 3648;
 //$("#headshot").attr('src',headshot);
 $(document).ready(function() {
-  $("#greeting-main").css('background-image','url("' + titleBackground + '")');
+  var img = new Image();
+  img.src = titleBackground;
+  img.onload = function(){
+    $("#greeting-main").css('background-image','url("' + titleBackground + '")');
+  }
 });

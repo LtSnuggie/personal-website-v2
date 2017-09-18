@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cp src/index.html dist/index.html & webpack & node server.js",
-    "build": "cp src/index.html dist/index.html & webpack",
-    "serve": "cp src/index.html dist/index.html & webpack --progress --colors --watch & node server.js",
-    "dev-serve": "cp src/index.html dist/index.html & webpack-dev-server --progress --colors --watch & node server.js"
+    "serve": "rm -rf dist/* & mkdir dist & cp src/index.html dist/index.html & webpack --progress --colors --watch & node server.js",
+    "dev-serve": "rm -rf dist/* & cp src/index.html dist/index.html & webpack-dev-server --progress --colors --watch & node server.js",
+    "package": "zip -r deploy.zip dist/*"
   },
   "repository": {
     "type": "git",
